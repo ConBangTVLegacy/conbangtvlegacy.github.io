@@ -4,182 +4,225 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Côn Bằng TV Legacy — xem phim trên iPhone, iPad iOS 6</title>
-<meta name="description" content="Côn Bằng TV Legacy: bản Côn Bằng TV viết riêng cho iPhone, iPad, iPod touch chạy iOS 6 đã jailbreak. Gom phim từ nhiều trang về một trang chủ, phát mượt bằng giải mã phần cứng, đồng bộ lịch sử với tivi và các máy khác, tự cập nhật. Miễn phí, mã nguồn công khai.">
+<meta name="description" content="Côn Bằng TV Legacy: bản Côn Bằng TV viết riêng cho iPhone, iPad, iPod touch chạy iOS 6 đã jailbreak. Gom phim từ nhiều trang về một trang chủ, phát mượt bằng giải mã phần cứng, đồng bộ lịch sử với tivi và các máy khác, tự cập nhật. Cài bằng Cydia. Miễn phí, mã nguồn công khai.">
 <meta name="theme-color" content="#0E1014">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Côn Bằng TV Legacy — xem phim trên iPhone, iPad iOS 6">
-<meta property="og:description" content="Bản Côn Bằng TV cho máy iOS 6 đã jailbreak: iPhone 4S, 5, 5c, iPad 2, 3, 4, iPad mini 1, iPod touch 5.">
+<meta property="og:description" content="Bản Côn Bằng TV cho máy iOS 6 đã jailbreak: iPhone 4S, 5, 5c, iPad 2, 3, 4, iPad mini 1, iPod touch 5. Cài bằng Cydia.">
 <meta property="og:url" content="https://conbangtvlegacy.github.io/">
 <meta property="og:image" content="https://conbangtvlegacy.github.io/assets/ipad-imdb.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://conbangtvlegacy.github.io/">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Côn Bằng TV Legacy","url":"https://conbangtvlegacy.github.io/","image":"https://conbangtvlegacy.github.io/assets/ipad-imdb.jpg","applicationCategory":"MultimediaApplication","operatingSystem":"iOS 6 (jailbreak)","inLanguage":"vi","offers":{"@type":"Offer","price":"0","priceCurrency":"VND"},"downloadUrl":"https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest"}
 </script>
 <style>
-:root{--accent:#FFB020;--bg:#0E1014;--surface:#171A21;--text:#F2F4F8;--dim:#9AA3B2;--line:rgba(255,255,255,.14);--edge:rgba(255,255,255,.08)}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--dim)}a:hover{color:var(--text)}
-a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-img{max-width:100%}
-strong{color:var(--text);font-weight:600}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;color:var(--text);background:var(--bg);padding:2px 6px;border-radius:6px;overflow-wrap:anywhere}
-pre{margin:0;padding:14px 16px;background:var(--bg);border:1px solid var(--edge);border-radius:12px;overflow-x:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.6;color:var(--text)}
+/* Trang này phải chạy cả trên Safari của iOS 6 (WebKit 536): không biến CSS, không grid, không flex / gap, không clamp(),
+   không <details>; bố cục bằng inline-block / float + media query; JavaScript ES5 (XMLHttpRequest, không fetch / =>). */
+html,body{margin:0;padding:0}
+body{background:#0E1014;color:#F2F4F8;font-family:'Be Vietnam Pro',"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+a{color:#9AA3B2}
+a:hover{color:#F2F4F8}
+img{max-width:100%;height:auto;border:0}
+strong{color:#F2F4F8;font-weight:600}
+h1,h2,h3{font-weight:700;margin:0}
+p{margin:0}
+code{font-family:Menlo,Consolas,monospace;font-size:.88em;color:#F2F4F8;background:#0E1014;padding:2px 6px;border-radius:6px;word-wrap:break-word}
+pre{margin:10px 0 0;padding:12px 14px;background:#0E1014;border:1px solid #23262E;border-radius:10px;overflow:auto;-webkit-overflow-scrolling:touch;font-family:Menlo,Consolas,monospace;font-size:13px;line-height:1.6;color:#F2F4F8;white-space:pre}
 .page{overflow:hidden}
-.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,40px);box-sizing:border-box}
-.sec{padding-top:clamp(80px,11vw,148px);scroll-margin-top:8px}
-.head{display:flex;flex-direction:column;gap:14px;max-width:700px;margin-bottom:clamp(28px,4vw,44px)}
-.eyebrow{margin:0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.h2{margin:0;font-size:clamp(32px,4.6vw,56px);line-height:1.1;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
-.h3{margin:0;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.02em;font-weight:600;text-wrap:balance}
-.lead{margin:0;font-size:clamp(16px,1.6vw,19px);line-height:1.6;color:var(--dim);text-wrap:pretty}
-.muted{margin:0;font-size:16px;line-height:1.6;color:var(--dim);text-wrap:pretty}
-.small{margin:0;font-size:15px;line-height:1.6;color:var(--dim)}
-.card{background:var(--surface);border:1px solid var(--edge);border-radius:24px;box-sizing:border-box}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
-.feat{padding:30px;display:flex;flex-direction:column;gap:12px}
-.feat svg{color:var(--accent)}
-.feat h3{margin:10px 0 0;font-size:21px;line-height:1.25;letter-spacing:-.015em;font-weight:600}
-.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border-radius:999px;background:var(--accent);color:#1A1204;font-size:17px;font-weight:600;text-decoration:none;box-sizing:border-box}
-.btn:hover{color:#1A1204;filter:brightness(1.07)}
-.btn-ghost{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:var(--text);font-size:17px;font-weight:500;text-decoration:none;box-sizing:border-box}
-.btn-ghost:hover{border-color:var(--text)}
-.alink{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--text);font-size:17px;text-decoration:none}
-.acc{display:inline-flex;align-items:center;min-height:44px;font-size:16px;font-weight:500;text-decoration:none;color:var(--accent)}
-.acc:hover{color:var(--text)}
-.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px;counter-reset:s}
-.steps li{display:flex;gap:16px;align-items:flex-start;font-size:17px;line-height:1.55;color:var(--dim)}
-.steps li>div{display:flex;flex-direction:column;gap:10px;min-width:0;flex:1}
-.steps li::before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.22);border-radius:50%;font-size:14px;font-weight:600;color:var(--text)}
-.ticks{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
-.ticks li{position:relative;padding-left:28px;font-size:16px;line-height:1.6;color:var(--dim)}
-.ticks li::before{content:"";position:absolute;left:2px;top:.42em;width:14px;height:14px;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat}
-.shot{margin:0;padding:clamp(8px,1.2vw,14px);background:#050608;border:1px solid rgba(255,255,255,.12);border-radius:clamp(12px,2vw,20px);box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.shot img{width:100%;height:auto;display:block;border-radius:clamp(6px,1vw,10px)}
-.shot.phone{max-width:320px;margin:0 auto;border-radius:36px;padding:14px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.cf:after{content:"";display:table;clear:both}
+.sec{padding-top:120px}
+.center{text-align:center}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#FFB020;margin-bottom:14px}
+.h1{font-size:84px;line-height:1.06;letter-spacing:-.035em;max-width:13em;margin:0 auto}
+.h2{font-size:52px;line-height:1.1;letter-spacing:-.03em;margin-bottom:16px}
+.h3{font-size:30px;line-height:1.2;letter-spacing:-.02em;font-weight:600;margin-bottom:16px}
+.lead{font-size:19px;line-height:1.6;color:#9AA3B2}
+.muted{font-size:16px;line-height:1.6;color:#9AA3B2}
+.muted+.muted{margin-top:10px}
+.small{font-size:15px;line-height:1.6;color:#9AA3B2}
+.head{max-width:700px;margin-bottom:40px}
+.acc{color:#FFB020;text-decoration:none}
+.card{background:#171A21;border:1px solid #23262E;border-radius:24px;padding:28px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.card h3{font-size:22px;line-height:1.25;letter-spacing:-.015em;font-weight:600;margin-bottom:12px}
+.card.big h3{font-size:26px;margin-bottom:20px}
+.stack .card{margin-bottom:24px}
+/* Lưới thẻ: inline-block (font-size 0 để khỏi khe giữa các ô) */
+.grid{font-size:0;margin:0 -10px}
+.grid .col{display:inline-block;vertical-align:top;width:33.333%;padding:10px;-webkit-box-sizing:border-box;box-sizing:border-box;font-size:16px}
+.grid.two .col{width:50%}
+.grid.four .col{width:25%}
+.feat svg{color:#FFB020;display:block;margin-bottom:12px}
+.btn{display:inline-block;padding:14px 30px;margin:6px;border-radius:999px;background:#FFB020;color:#1A1204;font-size:17px;font-weight:600;text-decoration:none}
+.btn:hover{color:#1A1204;background:#FFC24D}
+.btn-ghost{display:inline-block;padding:13px 26px;margin:6px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#F2F4F8;font-size:17px;font-weight:500;text-decoration:none}
+.btn-ghost:hover{border-color:#F2F4F8;color:#F2F4F8}
+.btn,.btn-ghost{white-space:nowrap}
+/* Danh sách bước / dấu tích */
+.steps{margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{position:relative;padding-left:46px;margin-bottom:18px;font-size:17px;line-height:1.55;color:#9AA3B2}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;line-height:30px;text-align:center;border:1px solid rgba(255,255,255,.25);border-radius:50%;font-size:14px;font-weight:600;color:#F2F4F8}
+.ticks{margin:0;padding:0;list-style:none}
+.ticks li{position:relative;padding-left:28px;margin-bottom:12px;font-size:16px;line-height:1.6;color:#9AA3B2}
+.ticks li:before{content:"\2713";position:absolute;left:2px;top:0;color:#FFB020;font-weight:700}
+.tag{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-size:13px;color:#9AA3B2;margin:0 6px 6px 0;font-weight:400;letter-spacing:0}
+.tag.ok{border-color:rgba(255,176,32,.55);color:#FFB020}
+/* Đầu trang */
+.top{padding:20px 0}
+.brand{float:left;color:#F2F4F8;text-decoration:none;font-size:17px;font-weight:600;line-height:40px}
+.brand img{width:36px;height:36px;border-radius:9px;vertical-align:middle;margin-right:10px}
+.nav{float:right;line-height:40px}
+.nav a{font-size:15px;text-decoration:none;margin-left:20px}
+.nav a.gh{color:#F2F4F8;padding:8px 18px;border:1px solid rgba(255,255,255,.18);border-radius:999px}
+.hero{padding-top:90px}
+.hero .lead{max-width:34em;margin:24px auto 0;font-size:20px}
+.hero .actions{margin-top:26px}
+.hero .note{max-width:30em;margin:10px auto 0}
+/* Ảnh iPad + iPhone chồng nhau */
+.devices{position:relative;max-width:1000px;margin:70px auto 0;padding-right:7%}
+.devices .ipad{padding:2.2%;background:#050608;border:1px solid rgba(255,255,255,.12);border-radius:30px;-webkit-box-shadow:0 48px 120px rgba(0,0,0,.65);box-shadow:0 48px 120px rgba(0,0,0,.65)}
+.devices .ipad img,.devices .iphone img{display:block;width:100%;border-radius:10px}
+.devices .iphone{position:absolute;right:0;bottom:-8%;width:24%;padding:1.1%;background:#050608;border:1px solid rgba(255,255,255,.16);border-radius:26px;-webkit-box-shadow:0 30px 80px rgba(0,0,0,.7);box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.devices .iphone img{border-radius:16px}
+.facts{margin-top:96px}
+.facts .col{border-top:1px solid rgba(255,255,255,.14);padding-top:18px}
+.facts b{display:block;font-size:17px;font-weight:600;margin-bottom:4px}
+.facts span{font-size:15px;line-height:1.5;color:#9AA3B2}
+/* Hàng chữ + ảnh */
+.row{margin-top:110px}
+.row:first-child{margin-top:0}
+.row .text{float:left;width:48%}
+.row .pic{float:right;width:48%}
+.row.flip .text{float:right}
+.row.flip .pic{float:left}
+.shot{margin:0;padding:12px;background:#050608;border:1px solid rgba(255,255,255,.12);border-radius:18px;-webkit-box-shadow:0 30px 80px rgba(0,0,0,.5);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.shot img{display:block;width:100%;border-radius:10px}
+.shot.phone{max-width:320px;margin:0 auto;padding:14px;border-radius:36px}
 .shot.phone img{border-radius:22px}
-.shot.tablet{max-width:440px;margin:0 auto;border-radius:30px;padding:18px}
-.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:clamp(24px,4vw,56px);align-items:center}
-.row+.row{margin-top:clamp(64px,9vw,112px)}
-.row .text{display:flex;flex-direction:column;gap:18px}
-@media (min-width:1000px){.row.flip .shot{order:-1}}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:0 32px;margin-top:clamp(36px,5vw,56px)}
-.facts div{padding:18px 0;border-top:1px solid var(--line)}
-.facts b{display:block;font-size:17px;font-weight:600}
-.facts span{font-size:15px;line-height:1.5;color:var(--dim)}
-.plat{padding:28px;display:flex;flex-direction:column;gap:14px}
-.plat h3{margin:0;font-size:24px;line-height:1.2;letter-spacing:-.02em;font-weight:600}
-.tag{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--dim);margin:0 6px 6px 0}
-.tag.ok{border-color:rgba(255,176,32,.5);color:var(--accent)}
-.install{padding:clamp(24px,3.4vw,40px);display:flex;flex-direction:column;gap:22px}
-.install h3{margin:0;font-size:26px;letter-spacing:-.02em;font-weight:600}
-.devices{position:relative;max-width:1000px;margin:clamp(44px,6vw,80px) auto 0;padding-right:clamp(0px,6vw,70px)}
-.devices .ipad{padding:2.2%;background:#050608;border:1px solid rgba(255,255,255,.12);border-radius:clamp(16px,3vw,34px);box-shadow:0 48px 120px rgba(0,0,0,.65)}
-.devices .ipad img{width:100%;height:auto;display:block;border-radius:clamp(6px,1vw,12px)}
-.devices .iphone{position:absolute;right:0;bottom:-8%;width:24%;padding:1.1%;background:#050608;border:1px solid rgba(255,255,255,.16);border-radius:clamp(14px,2.6vw,30px);box-shadow:0 30px 80px rgba(0,0,0,.7)}
-.devices .iphone img{width:100%;height:auto;display:block;border-radius:clamp(8px,1.6vw,18px)}
-@media (max-width:640px){.devices{padding-right:0}.devices .iphone{width:30%;bottom:-14%;right:-2%}}
-.faq{display:flex;flex-direction:column;border-top:1px solid var(--line)}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:20px 0;font-size:clamp(17px,1.7vw,20px);font-weight:600;line-height:1.35}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";flex:none;font-size:26px;font-weight:400;color:var(--accent);line-height:1}
-.faq details[open] summary::after{content:"−"}
-.faq .ans{padding:0 0 22px;max-width:76ch;display:flex;flex-direction:column;gap:10px}
-.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,calc(env(safe-area-inset-bottom) + 16px));z-index:50;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(23,26,33,.92);border:1px solid rgba(255,255,255,.18);color:var(--text);box-shadow:0 10px 30px rgba(0,0,0,.45);text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .2s,transform .2s,visibility .2s,background-color .2s}
-.to-top:hover{color:#1A1204;background:var(--accent);border-color:var(--accent)}
-.to-top.is-hidden{opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none}
-@media (prefers-reduced-motion: reduce){.to-top{transition:none}}
+.shot.tablet{max-width:440px;margin:0 auto;padding:18px;border-radius:30px}
+/* Hỏi đáp: có JS thì bấm câu hỏi để mở; không JS thì hiện hết */
+.faq{border-top:1px solid rgba(255,255,255,.14)}
+.faq .q{border-bottom:1px solid rgba(255,255,255,.14)}
+.faq .q h3{position:relative;padding:20px 40px 20px 0;font-size:19px;font-weight:600;line-height:1.35;cursor:pointer}
+.faq .q h3:after{content:"\2212";position:absolute;right:4px;top:16px;font-size:26px;font-weight:400;color:#FFB020}
+.faq .ans{padding:0 0 22px;max-width:46em}
+.js .faq .q h3:after{content:"+"}
+.js .faq .q.open h3:after{content:"\2212"}
+.js .faq .q .ans{display:none}
+.js .faq .q.open .ans{display:block}
+.cta{margin-top:130px;padding:80px 40px;border-radius:32px;text-align:center}
+.cta img{width:76px;height:76px;border-radius:18px}
+.cta h2{font-size:46px;line-height:1.12;letter-spacing:-.03em;max-width:14em;margin:20px auto 14px}
+footer{padding:70px 0 56px}
+footer .links a{display:inline-block;font-size:15px;text-decoration:none;margin:0 24px 10px 0}
+footer p{margin-top:16px;max-width:52em;font-size:14px;line-height:1.65;color:#9AA3B2}
+.to-top{position:fixed;right:16px;bottom:20px;z-index:50;width:50px;height:50px;line-height:50px;text-align:center;border-radius:50%;background:rgba(23,26,33,.94);border:1px solid rgba(255,255,255,.18);color:#F2F4F8;text-decoration:none;font-size:22px;display:none}
+.to-top.show{display:block}
+/* Máy tính bảng / điện thoại */
+@media (max-width:980px){
+  .h1{font-size:64px}
+  .grid .col,.grid.four .col{width:50%}
+  .row .text,.row .pic,.row.flip .text,.row.flip .pic{float:none;width:auto}
+  .row .pic{margin-top:30px}
+  .nav{float:none;clear:both;line-height:1.6;padding-top:6px}
+  .nav a{display:inline-block;margin:6px 18px 6px 0}
+  .nav a.gh{padding:6px 16px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .sec{padding-top:80px}
+  .hero{padding-top:50px}
+  .h1{font-size:42px}
+  .h2{font-size:34px}
+  .h3{font-size:24px}
+  .lead,.hero .lead{font-size:17px}
+  .grid .col,.grid.two .col,.grid.four .col{width:100%}
+  .card{padding:22px;border-radius:20px}
+  .devices{padding-right:0;margin-top:44px}
+  .devices .iphone{width:30%;bottom:-14%;right:-2%;border-radius:16px}
+  .devices .iphone img{border-radius:10px}
+  .devices .ipad{border-radius:16px}
+  .facts{margin-top:70px}
+  .row{margin-top:80px}
+  .cta{margin-top:90px;padding:48px 22px}
+  .cta h2{font-size:32px}
+  .steps li{font-size:16px}
+  .btn,.btn-ghost{font-size:16px;padding:12px 20px;margin:5px 3px}
+}
 </style>
 </head>
 <body>
 <div id="top" class="page">
 
-<header class="wrap" style="padding-top: 20px; padding-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px 28px; flex-wrap: wrap">
-<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); min-height: 44px">
-<img src="assets/logo.png" alt="" style="width: 36px; height: 36px; border-radius: 9px; display: block">
-<span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em">Côn Bằng TV <span style="color: var(--accent)">Legacy</span></span>
-</a>
-<nav aria-label="Mục trong trang" style="display: flex; align-items: center; gap: 4px 24px; flex-wrap: wrap">
-<a href="#cai-dat" style="font-size: 15px; text-decoration: none; padding: 12px 0">Cài đặt</a>
-<a href="#tinh-nang" style="font-size: 15px; text-decoration: none; padding: 12px 0">Tính năng</a>
-<a href="#may-ho-tro" style="font-size: 15px; text-decoration: none; padding: 12px 0">Máy hỗ trợ</a>
-<a href="#hoi-dap" style="font-size: 15px; text-decoration: none; padding: 12px 0">Hỏi đáp</a>
-<a href="https://conbangtv.github.io/" style="font-size: 15px; text-decoration: none; padding: 12px 0">Bản cho máy khác</a>
-<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy" style="font-size: 15px; text-decoration: none; color: var(--text); padding: 11px 18px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px">GitHub</a>
-</nav>
-</header>
+<div class="wrap top cf">
+<a href="#top" class="brand"><img src="assets/logo.png" alt="">Côn Bằng TV <span style="color:#FFB020">Legacy</span></a>
+<div class="nav">
+<a href="#cai-dat">Cài đặt</a><a href="#tinh-nang">Tính năng</a><a href="#may-ho-tro">Máy hỗ trợ</a><a href="#hoi-dap">Hỏi đáp</a><a href="https://conbangtv.github.io/">Bản cho máy khác</a><a class="gh" href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy">GitHub</a>
+</div>
+</div>
 
 <!-- Đầu trang -->
-<section class="wrap" style="padding-top: clamp(48px, 8vw, 96px); display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
-<p class="eyebrow" style="text-wrap: balance">iPhone · iPad · iPod touch — iOS 6 đã jailbreak</p>
-<h1 style="margin: 0; max-width: 20ch; font-size: clamp(40px, 7.2vw, 88px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 700; text-wrap: balance">Máy cũ vẫn xem phim&nbsp;mượt.</h1>
-<p class="lead" style="max-width: 56ch; font-size: clamp(17px, 1.9vw, 21px)">iPhone, iPad đời iOS 6 không còn cài được app xem phim nào. <strong>Côn Bằng TV Legacy</strong> viết riêng cho chúng: gom phim từ nhiều trang về một trang chủ, phát bằng chip giải mã của máy nên 1080p vẫn mượt, đồng bộ lịch sử với tivi và các máy khác trong nhà — và tự cập nhật.</p>
-<div style="display: flex; align-items: center; justify-content: center; gap: 12px 16px; flex-wrap: wrap; margin-top: 8px">
-<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" class="btn">Thêm vào Cydia</a>
-<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn-ghost js-deb">Tải tệp .deb</a>
+<div class="wrap hero center">
+<p class="eyebrow">iPhone · iPad · iPod touch — iOS 6 đã jailbreak</p>
+<h1 class="h1">Máy cũ vẫn xem phim&nbsp;mượt.</h1>
+<p class="lead">iPhone, iPad đời iOS 6 không còn cài được app xem phim nào. <strong>Côn Bằng TV Legacy</strong> viết riêng cho chúng: gom phim từ nhiều trang về một trang chủ, phát bằng chip giải mã của máy nên 1080p vẫn mượt, đồng bộ lịch sử với tivi và các máy khác trong nhà — và tự cập nhật.</p>
+<div class="actions">
+<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" class="btn">Thêm vào Cydia</a><a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn-ghost js-deb">Tải tệp .deb</a>
 </div>
-<p class="small" style="margin-top: -8px; max-width: 46ch">Mở trang này bằng Safari trên iPhone / iPad đã jailbreak rồi bấm <strong>Thêm vào Cydia</strong> — hoặc <a href="#cai-dat" style="color: var(--accent); text-decoration: none">xem cách cài</a>.</p>
-<p class="small js-ver" style="margin-top: -18px">Bản mới nhất ở GitHub Releases</p>
-</section>
+<p class="small note">Mở trang này bằng Safari trên iPhone / iPad đã jailbreak rồi bấm <strong>Thêm vào Cydia</strong> — hoặc <a href="#cai-dat" class="acc">xem cách cài</a>.</p>
+<p class="small js-ver" style="margin-top:6px">Bản mới nhất ở GitHub Releases</p>
+</div>
 
 <div class="wrap">
 <div class="devices">
 <div class="ipad"><img src="assets/ipad-imdb.jpg" alt="Côn Bằng TV Legacy trên iPad mini (iOS 6): mục Điểm IMDb cao, lưới phim có nhãn điểm IMDb" width="1024" height="748"></div>
 <div class="iphone"><img src="assets/iphone-trang-chu.jpg" alt="Côn Bằng TV Legacy trên iPhone 5 (iOS 6): trang chủ với các nút Theo dõi, Điểm IMDb cao, hàng Xem tiếp" width="640" height="1096"></div>
 </div>
-<div class="facts" style="margin-top: clamp(64px, 9vw, 104px)">
-<div><b>Miễn phí</b><span>Không tài khoản, không quảng cáo của app.</span></div>
-<div><b>Mượt trên máy cũ</b><span>Phát bằng chip giải mã của máy — 1080p vẫn mượt trên iPhone 5, iPad mini.</span></div>
-<div><b>Tự cập nhật</b><span>Có bản mới là app hỏi, bấm một nút là cài, giữ nguyên lịch sử.</span></div>
-<div><b>Mã nguồn công khai</b><span>Ai cũng xem được app làm gì, trên GitHub.</span></div>
+<div class="grid four facts">
+<div class="col"><b>Miễn phí</b><span>Không tài khoản, không quảng cáo của app.</span></div><div class="col"><b>Mượt trên máy cũ</b><span>Phát bằng chip giải mã của máy — 1080p vẫn mượt trên iPhone 5, iPad mini.</span></div><div class="col"><b>Tự cập nhật</b><span>Có bản mới là app hỏi, bấm một nút là cài, giữ nguyên lịch sử.</span></div><div class="col"><b>Mã nguồn công khai</b><span>Ai cũng xem được app làm gì, trên GitHub.</span></div>
 </div>
 </div>
 
 <!-- Cài đặt -->
-<section id="cai-dat" class="wrap sec">
+<div id="cai-dat" class="wrap sec">
 <div class="head">
 <p class="eyebrow">Cài đặt</p>
 <h2 class="h2">Cài một lần, các bản sau tự lên.</h2>
 <p class="lead">Máy cần đã jailbreak (có Cydia). Cách dễ nhất: thêm nguồn Cydia của app rồi bấm Cài — làm ngay trên iPhone / iPad, không cần máy tính.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 24px; align-items: start">
-<div style="display: flex; flex-direction: column; gap: 24px">
-<div class="card install">
-<h3>Cách 1 — Cydia <span class="tag ok" style="vertical-align: middle; margin: 0 0 0 6px">khuyên dùng</span></h3>
+<div class="grid two">
+<div class="col stack">
+<div class="card big">
+<h3>Cách 1 — Cydia <span class="tag ok">khuyên dùng</span></h3>
 <ol class="steps">
-<li><div><span>Trên iPhone / iPad, mở trang này bằng <strong>Safari</strong> rồi bấm <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" style="color: var(--accent); text-decoration: none">Thêm vào Cydia</a>. Hoặc trong Cydia: <strong>Nguồn → Sửa → Thêm</strong>, gõ:</span>
-<pre>https://conbangtvlegacy.github.io/repo/</pre></div></li>
-<li><div><span>Chờ Cydia tải nguồn xong, tìm <strong>Côn Bằng TV</strong>, bấm <strong>Cài đặt</strong> → <strong>Xác nhận</strong>.</span></div></li>
-<li><div><span><strong>Mở «Côn Bằng TV»</strong> trên màn hình chính, đọc và đồng ý phần miễn trừ trách nhiệm — thế là xem được.</span></div></li>
+<li>Trên iPhone / iPad, mở trang này bằng <strong>Safari</strong> rồi bấm <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" class="acc">Thêm vào Cydia</a>. Hoặc trong Cydia: <strong>Nguồn → Sửa → Thêm</strong>, gõ:
+<pre>https://conbangtvlegacy.github.io/repo/</pre></li>
+<li>Chờ Cydia tải nguồn xong, tìm <strong>Côn Bằng TV</strong>, bấm <strong>Cài đặt</strong> → <strong>Xác nhận</strong>.</li>
+<li><strong>Mở «Côn Bằng TV»</strong> trên màn hình chính, đọc và đồng ý phần miễn trừ trách nhiệm — thế là xem được.</li>
 </ol>
 </div>
-<div class="card install">
+<div class="card big">
 <h3>Cách 2 — tệp .deb</h3>
 <ol class="steps">
-<li><div><span><strong>Tải tệp .deb.</strong> Bấm <a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="js-deb" style="color: var(--accent); text-decoration: none">Tải bản mới nhất</a> trên máy tính (Safari của iOS 6 thường không mở được GitHub nữa).</span></div></li>
-<li><div><span><strong>Chép sang máy và cài.</strong> Máy có <strong>OpenSSH</strong> (cài trong Cydia) thì trên máy tính chạy, thay <code>IP-máy</code> bằng địa chỉ Wi-Fi của iPhone / iPad (Cài đặt → Wi-Fi → ⓘ):</span>
+<li><strong>Tải tệp .deb:</strong> bấm <a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="acc js-deb">Tải tệp .deb</a> — bằng Safari ngay trên máy (máy có <strong>iFile</strong> / <strong>Filza</strong> thì chọn «Mở trong iFile»), hoặc trên máy tính.</li>
+<li><strong>Cài:</strong> trong iFile / Filza chạm tệp .deb → <strong>Cài đặt</strong>. Hoặc từ máy tính qua SSH (máy có <strong>OpenSSH</strong>), thay <code>IP-máy</code> bằng địa chỉ Wi-Fi của máy:
 <pre>scp vn.conbangtv.legacy_*.deb root@IP-máy:/tmp/
-ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c uicache"</pre>
-<span>Hoặc chép tệp vào máy (iTunes / iFunBox / AirDrop của jailbreak), mở bằng <strong>iFile</strong> hay <strong>Filza</strong> rồi chọn <strong>Cài đặt</strong>; chưa thấy biểu tượng thì khởi động lại màn hình chính (respring).</span></div></li>
+ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c uicache"</pre></li>
+<li>Chưa thấy biểu tượng thì khởi động lại màn hình chính (respring).</li>
 </ol>
-<p class="small">Mật khẩu SSH mặc định của máy jailbreak là <code>alpine</code> — nên đổi bằng lệnh <code>passwd</code> (cả tài khoản <code>root</code> lẫn <code>mobile</code>) để người cùng mạng Wi-Fi không vào được máy.</p>
+<p class="small">Mật khẩu SSH mặc định của máy jailbreak là <code>alpine</code> — nên đổi bằng lệnh <code>passwd</code> (cả <code>root</code> lẫn <code>mobile</code>) để người cùng mạng Wi-Fi không vào được máy.</p>
 </div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 24px">
-<div class="card install">
+</div><div class="col stack">
+<div class="card big">
 <h3>Các bản sau: tự cập nhật</h3>
 <p class="muted">Mở app là app tự kiểm tra bản mới trên GitHub (tối đa vài giờ một lần). Có bản mới thì hiện hộp <strong>«Có bản mới»</strong> kèm những thay đổi chính; bấm <strong>Cập nhật</strong>: app tải về, kiểm tra tệp, cài đè rồi tự mở lại sau vài giây — lịch sử, người xem và cài đặt giữ nguyên.</p>
 <p class="muted">Kiểm tra tay: <strong>Cài đặt → Phiên bản</strong>. Đang xem phim thì app không hỏi giữa chừng. Cài bằng Cydia thì bản mới cũng hiện trong mục <strong>Thay đổi</strong> (Changes) của Cydia.</p>
 </div>
-<div class="card install">
+<div class="card big">
 <h3>Cần gì</h3>
 <ul class="ticks">
 <li>iPhone, iPad hoặc iPod touch chạy <strong>iOS 6</strong> (6.0 – 6.1.6), đã jailbreak (vd p0sixspwn, evasi0n).</li>
@@ -189,67 +232,59 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 </div>
 </div>
 </div>
-</section>
+</div>
 
 <!-- Tính năng tóm tắt -->
-<section id="tinh-nang" class="wrap sec">
+<div id="tinh-nang" class="wrap sec">
 <div class="head">
 <p class="eyebrow">Tính năng</p>
 <h2 class="h2">Đủ như bản trên tivi, gọn cho màn hình nhỏ.</h2>
 <p class="lead">Dùng chung «bộ não» với Côn Bằng TV trên tivi, Windows, Linux: cùng cách đọc trang phim, cùng trang chủ tổng hợp, cùng đồng bộ — chỉ khác lớp giao diện viết lại cho iOS 6.</p>
 </div>
 <div class="grid">
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="9" rx="1.5"></rect><rect x="14" y="4" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="8" rx="1.5"></rect><rect x="3" y="16" width="7" height="4" rx="1.5"></rect></svg>
+<div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="9" rx="1.5"></rect><rect x="14" y="4" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="8" rx="1.5"></rect><rect x="3" y="16" width="7" height="4" rx="1.5"></rect></svg>
 <h3>Một trang chủ, nhiều nguồn phim</h3>
 <p class="muted">Phim mới từ các trang gom về một chỗ, phim trùng gộp làm một («3 nguồn»), xếp theo thứ bạn đang xem dở.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path d="M10 9l4 2-4 2z"></path><path d="M8 20h8"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path d="M10 9l4 2-4 2z"></path><path d="M8 20h8"></path></svg>
 <h3>Phát mượt, bỏ quảng cáo chèn</h3>
 <p class="muted">Video phát bằng trình phát gốc của iOS, giải mã phần cứng tới 1080p. Đoạn quảng cáo chèn giữa phim (HLS) được cắt bỏ trước khi phát.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="5" height="4" rx="1"></rect><rect x="10" y="4" width="5" height="4" rx="1"></rect><rect x="17" y="4" width="4" height="4" rx="1"></rect><rect x="3" y="11" width="5" height="4" rx="1"></rect><rect x="10" y="11" width="5" height="4" rx="1"></rect><path d="M3 19h18"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="5" height="4" rx="1"></rect><rect x="10" y="4" width="5" height="4" rx="1"></rect><rect x="17" y="4" width="4" height="4" rx="1"></rect><rect x="3" y="11" width="5" height="4" rx="1"></rect><rect x="10" y="11" width="5" height="4" rx="1"></rect><path d="M3 19h18"></path></svg>
 <h3>Chọn tập ngay khi đang xem</h3>
 <p class="muted">Nút <strong>☰ Tập</strong> mở lưới mọi tập (đổi được Vietsub / Thuyết minh), tập đã xem mờ đi. Nhớ chỗ đang xem, tự chuyển tập sau.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg>
 <h3>Có tập mới là biết</h3>
 <p class="muted">Bấm <strong>Theo dõi</strong> một lần. Phim có tập mới lên hàng «Có tập mới» ở đầu trang chủ, nút «☆ Theo dõi» ghi số phim mới.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg>
 <h3>Một ô tìm cho mọi trang</h3>
 <p class="muted">Gõ tên phim có dấu hay không dấu; app hỏi cùng lúc mọi trang, kết quả chia theo từng trang.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"></path><circle cx="17.5" cy="9" r="2.4"></circle><path d="M16.5 14.6c2.6.3 4.5 2.2 4.5 5.4"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"></path><circle cx="17.5" cy="9" r="2.4"></circle><path d="M16.5 14.6c2.6.3 4.5 2.2 4.5 5.4"></path></svg>
 <h3>Mỗi người một hồ sơ</h3>
 <p class="muted">Lịch sử riêng, khoá mã PIN, hồ sơ trẻ em chỉ có hoạt hình hợp tuổi, giới hạn giờ xem và giờ đi ngủ bằng mã PIN phụ huynh.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a8 8 0 0 1 14-3.5L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 15a8 8 0 0 1-14 3.5L4 16"></path><path d="M4 20v-4h4"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a8 8 0 0 1 14-3.5L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 15a8 8 0 0 1-14 3.5L4 16"></path><path d="M4 20v-4h4"></path></svg>
 <h3>Xem dở ở tivi, xem tiếp trên iPad</h3>
 <p class="muted">Đồng bộ trong nhà với Côn Bằng TV trên Android TV, Windows, iPad mới, Mac, Linux: lịch sử, chỗ đang xem, phim theo dõi.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.2-2.8 7.6-7 9.5-4.2-1.9-7-5.3-7-9.5V6l7-3z"></path><path d="M9 12l2.2 2.2L15 10.4"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.2-2.8 7.6-7 9.5-4.2-1.9-7-5.3-7-9.5V6l7-3z"></path><path d="M9 12l2.2 2.2L15 10.4"></path></svg>
 <h3>Vào được cả khi bị chặn</h3>
 <p class="muted">DNS mã hoá và vượt chặn nhà mạng có sẵn; thêm proxy <strong>SOCKS5</strong> / <strong>Shadowsocks</strong> (dán link <code>ss://</code>) cho ai cần.</p>
-</div>
-<div class="card feat">
-<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"></path></svg>
+</div></div><div class="col"><div class="card feat">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"></path></svg>
 <h3>Điểm IMDb, thể loại, quốc gia</h3>
 <p class="muted">Nhãn điểm IMDb trên ảnh phim, mục «Điểm IMDb cao», lọc theo thể loại và quốc gia ngay từ đầu trang chủ.</p>
+</div></div>
 </div>
 </div>
-</section>
 
 <!-- Tính năng chi tiết -->
-<section id="xem-ky" class="wrap sec" aria-label="Tính năng chi tiết">
-<div class="row">
+<div class="wrap sec">
+<div class="row cf">
 <div class="text">
 <p class="eyebrow">Trang chủ</p>
 <h3 class="h3">Mở app là thấy đúng phim mình hay xem.</h3>
@@ -260,10 +295,10 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 <li>Trang nào chậm hay lỗi thì dùng bản đã lưu, không bắt cả trang chủ chờ.</li>
 </ul>
 </div>
-<figure class="shot phone"><img src="assets/iphone-trang-chu.jpg" alt="Trang chủ trên iPhone 5: dải nút Theo dõi, Điểm IMDb cao; hàng Xem tiếp và hàng Giống «phim vừa xem»" width="640" height="1096" loading="lazy"></figure>
+<div class="pic"><div class="shot phone"><img src="assets/iphone-trang-chu.jpg" alt="Trang chủ trên iPhone 5: dải nút Theo dõi, Điểm IMDb cao; hàng Xem tiếp và hàng Giống «phim vừa xem»" width="640" height="1096"></div></div>
 </div>
 
-<div class="row flip">
+<div class="row flip cf">
 <div class="text">
 <p class="eyebrow">Xem phim</p>
 <h3 class="h3">Chọn tập, đổi server mà không thoát ra.</h3>
@@ -274,10 +309,10 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 <li>Tự nhớ chỗ đang xem từng tập, xem hết thì sang tập sau.</li>
 </ul>
 </div>
-<figure class="shot"><img src="assets/iphone-chon-tap.jpg" alt="Trình phát trên iPhone 5 nằm ngang, bảng chọn tập đang mở: lưới Tập 1 đến Tập 28, Tập 1 viền vàng" width="1136" height="640" loading="lazy"></figure>
+<div class="pic"><div class="shot"><img src="assets/iphone-chon-tap.jpg" alt="Trình phát trên iPhone 5 nằm ngang, bảng chọn tập đang mở: lưới Tập 1 đến Tập 28, Tập 1 viền vàng" width="1136" height="640"></div></div>
 </div>
 
-<div class="row">
+<div class="row cf">
 <div class="text">
 <p class="eyebrow">Trang phim</p>
 <h3 class="h3">Xem tiếp, theo dõi và phim liên quan.</h3>
@@ -287,10 +322,10 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 <li>Cuối trang: các hàng <strong>phim liên quan</strong> — cùng bộ, cùng thể loại, cả từ trang khác.</li>
 </ul>
 </div>
-<figure class="shot tablet"><img src="assets/ipad-phim-lien-quan.jpg" alt="Trang phim trên iPad mini: ảnh phim, thông tin, nút Xem từ tập đầu, Theo dõi, danh sách tập, mô tả và hàng phim cùng thể loại" width="768" height="1004" loading="lazy"></figure>
+<div class="pic"><div class="shot tablet"><img src="assets/ipad-phim-lien-quan.jpg" alt="Trang phim trên iPad mini: ảnh phim, thông tin, nút Xem từ tập đầu, Theo dõi, danh sách tập, mô tả và hàng phim cùng thể loại" width="768" height="1004"></div></div>
 </div>
 
-<div class="row flip">
+<div class="row flip cf">
 <div class="text">
 <p class="eyebrow">Tìm phim hay</p>
 <h3 class="h3">Điểm IMDb cao, thể loại, quốc gia.</h3>
@@ -300,10 +335,10 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 <li>Ô tìm hỏi mọi trang cùng lúc, kết quả chia theo trang.</li>
 </ul>
 </div>
-<figure class="shot"><img src="assets/ipad-the-loai.jpg" alt="Màn Thể loại trên iPad mini nằm ngang: lưới nút Hành Động, Cổ Trang, Viễn Tưởng, Kinh Dị, Tình Cảm…" width="1024" height="748" loading="lazy"></figure>
+<div class="pic"><div class="shot"><img src="assets/ipad-the-loai.jpg" alt="Màn Thể loại trên iPad mini nằm ngang: lưới nút Hành Động, Cổ Trang, Viễn Tưởng, Kinh Dị, Tình Cảm…" width="1024" height="748"></div></div>
 </div>
 
-<div class="row">
+<div class="row cf">
 <div class="text">
 <p class="eyebrow">Người xem và trẻ em</p>
 <h3 class="h3">Mỗi người một hồ sơ, trẻ em có chế độ riêng.</h3>
@@ -314,196 +349,190 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 <li><strong>Giới hạn giờ xem</strong> mỗi ngày và <strong>giờ đi ngủ</strong>; hết giờ phim dừng, người lớn nhập mã để cho xem thêm 15 / 30 / 60 phút.</li>
 </ul>
 </div>
-<figure class="shot phone"><img src="assets/iphone-cai-dat.jpg" alt="Cài đặt trên iPhone 5: người xem, mã PIN, giới hạn giờ xem, trang chủ tổng hợp, hồ sơ trẻ em" width="640" height="1096" loading="lazy"></figure>
+<div class="pic"><div class="shot phone"><img src="assets/iphone-cai-dat.jpg" alt="Cài đặt trên iPhone 5: người xem, mã PIN, giới hạn giờ xem, trang chủ tổng hợp, hồ sơ trẻ em" width="640" height="1096"></div></div>
 </div>
-</section>
+</div>
 
 <!-- Máy hỗ trợ -->
-<section id="may-ho-tro" class="wrap sec">
+<div id="may-ho-tro" class="wrap sec">
 <div class="head">
 <p class="eyebrow">Máy hỗ trợ</p>
 <h2 class="h2">iPhone, iPad đời iOS 6.</h2>
 <p class="lead">App dựng cho chip armv7 và iOS 6.0 trở lên. Đã chạy thật trên hai máy dưới đây; các máy cùng đời còn lại dự kiến chạy được — dùng thử thấy lỗi thì báo giúp.</p>
 </div>
-<div class="grid">
-<div class="card plat">
+<div class="grid two">
+<div class="col"><div class="card">
 <h3>iPhone</h3>
-<div><span class="tag ok">iPhone 5 · iOS 6.1.4 — đã thử</span><span class="tag">iPhone 5c</span><span class="tag">iPhone 4S</span><span class="tag">iPhone 4</span></div>
+<p><span class="tag ok">iPhone 5 · iOS 6.1.4 — đã thử</span><span class="tag">iPhone 5c</span><span class="tag">iPhone 4S</span><span class="tag">iPhone 4</span></p>
 <p class="muted">Xem dọc, phim tự xoay ngang. Máy chưa thử mà chạy được hay gặp lỗi thì báo giúp để ghi vào đây.</p>
-</div>
-<div class="card plat">
+</div></div><div class="col"><div class="card">
 <h3>iPad</h3>
-<div><span class="tag ok">iPad mini 1 · iOS 6.1.3 — đã thử</span><span class="tag">iPad 2</span><span class="tag">iPad 3</span><span class="tag">iPad 4</span></div>
+<p><span class="tag ok">iPad mini 1 · iOS 6.1.3 — đã thử</span><span class="tag">iPad 2</span><span class="tag">iPad 3</span><span class="tag">iPad 4</span></p>
 <p class="muted">Giao diện ngang / dọc đều được, lưới phim nhiều cột hơn, chữ lớn hơn.</p>
-</div>
-<div class="card plat">
+</div></div><div class="col"><div class="card">
 <h3>iPod touch</h3>
-<div><span class="tag">iPod touch 5</span><span class="tag">iPod touch 4</span></div>
+<p><span class="tag">iPod touch 5</span><span class="tag">iPod touch 4</span></p>
 <p class="muted">Như iPhone. Cần Wi-Fi.</p>
-</div>
-<div class="card plat">
+</div></div><div class="col"><div class="card">
 <h3>Máy đời mới hơn</h3>
-<p class="muted">iPad, iPhone chạy iOS / iPadOS 15 trở lên, Android TV, điện thoại Android, Windows, Mac, Linux: dùng <a href="https://conbangtv.github.io/" style="color: var(--accent); text-decoration: none">Côn Bằng TV bản chính</a>. Các máy đồng bộ được với nhau.</p>
+<p class="muted">iPad, iPhone chạy iOS / iPadOS 15 trở lên, Android TV, điện thoại Android, Windows, Mac, Linux: dùng <a href="https://conbangtv.github.io/" class="acc">Côn Bằng TV bản chính</a>. Các máy đồng bộ được với nhau.</p>
+</div></div>
 </div>
 </div>
-</section>
 
 <!-- Đồng bộ trong nhà -->
-<section id="dong-bo" class="wrap sec">
-<div class="row">
+<div id="dong-bo" class="wrap sec">
+<div class="row cf">
 <div class="text">
 <p class="eyebrow">Đồng bộ trong nhà</p>
 <h2 class="h2">Xem dở ở tivi, mở iPad xem tiếp.</h2>
 <p class="lead">iPhone / iPad iOS 6 ghép được với Côn Bằng TV trên tivi, máy tính và iPad mới cùng mạng Wi-Fi: lịch sử xem, chỗ đang xem từng tập, phim theo dõi, người xem và danh sách trang phim. Không có máy chủ ở giữa.</p>
 </div>
-<div class="card install">
+<div class="pic"><div class="card big">
 <ol class="steps">
-<li><div><span>Trên tivi (hoặc máy kia) mở <strong>Đồng bộ trong nhà</strong> — màn hình hiện <strong>mã ghép 4 số</strong>.</span></div></li>
-<li><div><span>Trên iPhone / iPad: <strong>Cài đặt → Đồng bộ trong nhà</strong>, chọn tên máy kia trong «Máy trong mạng» rồi nhập mã. Không thấy tên thì chọn <strong>Nhập địa chỉ và mã ghép…</strong> và gõ địa chỉ IP của máy kia.</span></div></li>
-<li><div><span><strong>Xong.</strong> Từ đó hai máy tự đồng bộ khi mở app, khi xem xong phim và vài phút một lần lúc app đang mở.</span></div></li>
+<li>Trên tivi (hoặc máy kia) mở <strong>Đồng bộ trong nhà</strong> — màn hình hiện <strong>mã ghép 4 số</strong>.</li>
+<li>Trên iPhone / iPad: <strong>Cài đặt → Đồng bộ trong nhà</strong>, chọn tên máy kia trong «Máy trong mạng» rồi nhập mã. Không thấy tên thì chọn <strong>Nhập địa chỉ và mã ghép…</strong> và gõ địa chỉ IP của máy kia.</li>
+<li><strong>Xong.</strong> Từ đó hai máy tự đồng bộ khi mở app, khi xem xong phim và vài phút một lần lúc app đang mở.</li>
 </ol>
 <p class="small">iOS 6 tạm dừng app khi ra màn hình chính, nên máy kia chỉ gửi sang được lúc app đang mở — mở app là tự lấy dữ liệu mới.</p>
+</div></div>
 </div>
 </div>
-</section>
 
 <!-- Giới hạn -->
-<section id="gioi-han" class="wrap sec">
+<div id="gioi-han" class="wrap sec">
 <div class="head">
 <p class="eyebrow">Nói trước</p>
 <h2 class="h2">Những gì iOS 6 không làm được.</h2>
 </div>
 <div class="grid">
-<div class="card feat">
-<h3 style="margin: 0">Server chỉ có trình phát nhúng</h3>
+<div class="col"><div class="card">
+<h3>Server chỉ có trình phát nhúng</h3>
 <p class="muted">Vài server của trang phim chỉ là trang web nhúng trình phát (streamfree, NguonC…) — trình duyệt của iOS 6 quá cũ để chạy. App tự bỏ qua và chọn server có luồng video thật (KKPhim, VSMOV…).</p>
+</div></div><div class="col"><div class="card">
+<h3>Cần jailbreak</h3>
+<p class="muted">Apple đã ngừng mọi cách cài app chưa duyệt lên iOS 6, App Store cũng không còn app nào chạy được. Gói cài qua Cydia nên máy phải đã jailbreak.</p>
+</div></div><div class="col"><div class="card">
+<h3>Không có hình trong hình</h3>
+<p class="muted">iOS 6 chưa có phát thu nhỏ: ra màn hình chính là phim tạm dừng, mở lại app là xem tiếp đúng chỗ.</p>
+</div></div>
 </div>
-<div class="card feat">
-<h3 style="margin: 0">Cần jailbreak</h3>
-<p class="muted">Apple đã ngừng mọi cách cài app chưa duyệt lên iOS 6, App Store cũng không còn app nào chạy được. Gói <code>.deb</code> cài qua Cydia / dpkg nên máy phải đã jailbreak.</p>
 </div>
-<div class="card feat">
-<h3 style="margin: 0">Không có hình trong hình</h3>
-<p class="muted">iOS 6 chưa có phát thu nhỏ (hình trong hình): ra màn hình chính là phim tạm dừng, mở lại app là xem tiếp đúng chỗ.</p>
-</div>
-</div>
-</section>
 
 <!-- Riêng tư -->
-<section id="rieng-tu" class="wrap sec">
+<div id="rieng-tu" class="wrap sec">
 <div class="head">
 <p class="eyebrow">Quyền riêng tư</p>
 <h2 class="h2">Không tài khoản, không theo dõi.</h2>
 <p class="lead">App không có máy chủ riêng và không biết bạn xem gì.</p>
 </div>
 <div class="grid">
-<div class="card feat">
-<h3 style="margin: 0">Dữ liệu nằm trên máy bạn</h3>
+<div class="col"><div class="card">
+<h3>Dữ liệu nằm trên máy bạn</h3>
 <p class="muted">Lịch sử, người xem và cài đặt chỉ lưu trên từng máy; đồng bộ trong nhà gửi thẳng giữa các máy trong mạng Wi-Fi. Mật khẩu proxy cất riêng, không đồng bộ, không gửi đi đâu.</p>
-</div>
-<div class="card feat">
-<h3 style="margin: 0">Chỉ kết nối nơi cần</h3>
+</div></div><div class="col"><div class="card">
+<h3>Chỉ kết nối nơi cần</h3>
 <p class="muted">Các trang phim bạn chọn; GitHub để kiểm tra bản mới; dịch vụ DNS mã hoá (tắt được). Không gắn công cụ thống kê hay quảng cáo.</p>
-</div>
-<div class="card feat">
-<h3 style="margin: 0">Cập nhật có kiểm tra</h3>
+</div></div><div class="col"><div class="card">
+<h3>Cập nhật có kiểm tra</h3>
 <p class="muted">Bản mới chỉ tải từ GitHub của dự án, kiểm mã SHA-256 trước khi cài. Công cụ cài (quyền root, cần để cài gói) chỉ nhận đúng gói của app.</p>
+</div></div>
 </div>
 </div>
-</section>
 
 <!-- Hỏi đáp -->
-<section id="hoi-dap" class="wrap sec">
+<div id="hoi-dap" class="wrap sec">
 <div class="head">
 <p class="eyebrow">Hỏi đáp</p>
 <h2 class="h2">Câu hỏi thường gặp.</h2>
 </div>
 <div class="faq">
-<details id="chua-jailbreak">
-<summary>Máy chưa jailbreak cài được không?</summary>
-<div class="ans"><p class="muted">Không. iOS 6 chỉ cài được app chưa qua App Store khi đã jailbreak. Máy iOS 6.1.3 – 6.1.6 jailbreak bằng p0sixspwn, iOS 6.0 – 6.1.2 bằng evasi0n (cần máy tính). Jailbreak là việc của bạn — hãy sao lưu máy trước.</p></div>
-</details>
-<details>
-<summary>App có mất phí, có quảng cáo không?</summary>
-<div class="ans"><p class="muted">Miễn phí, không tài khoản, không quảng cáo của app. Đoạn quảng cáo chèn giữa phim trong luồng HLS được app cắt bỏ; quảng cáo nằm sẵn trong các trang phim thì app không hiển thị trang web nên cũng không thấy.</p></div>
-</details>
-<details>
-<summary>Video không phát hoặc báo lỗi?</summary>
-<div class="ans"><p class="muted">Chạm vào video cho hiện nút, bấm <strong>Server</strong> và chọn server khác — app nhớ server nào chạy được cho lần sau. Phim mà mọi server chỉ có trình phát nhúng thì iOS 6 không phát được (xem <a href="#gioi-han" style="color: var(--accent); text-decoration: none">Những gì iOS 6 không làm được</a>); tìm phim đó ở trang khác bằng ô tìm kiếm.</p></div>
-</details>
-<details>
-<summary>Trang phim không vào được?</summary>
-<div class="ans"><p class="muted">Thường là nhà mạng chặn. DNS mã hoá và vượt chặn đã có trong <strong>Cài đặt → Mạng</strong>; vẫn không được thì đổi trang phim khác trong <strong>Cài đặt → Trang phim</strong>, hoặc dùng proxy SOCKS5 / Shadowsocks.</p></div>
-</details>
-<details>
-<summary>Cập nhật app thế nào?</summary>
-<div class="ans"><p class="muted">Không cần làm gì: mở app là app tự kiểm tra, có bản mới thì hỏi; bấm <strong>Cập nhật</strong> là app tải, cài và mở lại. Kiểm tra tay ở <strong>Cài đặt → Phiên bản</strong>. Đã thêm nguồn Cydia thì cập nhật trong Cydia cũng được. Bản cài trước 0.4.0 chưa có tự cập nhật — cài bản mới một lần bằng Cydia hoặc tệp .deb.</p></div>
-</details>
-<details>
-<summary>Không thấy biểu tượng sau khi cài bằng tệp .deb?</summary>
-<div class="ans"><p class="muted">Chạy <code>su mobile -c uicache</code> qua SSH, hoặc khởi động lại màn hình chính (respring) bằng Cydia / SBSettings. Đừng chạy uicache lúc app đang mở.</p></div>
-</details>
-<details>
-<summary>Có an toàn không?</summary>
-<div class="ans"><p class="muted">Mã nguồn công khai trên GitHub, ai cũng xem được app làm gì. Máy jailbreak nên đổi mật khẩu SSH mặc định (<code>alpine</code>) bằng lệnh <code>passwd</code>. App chỉ là trình xem: không lưu trữ, không tải lên, không phát tán phim.</p></div>
-</details>
-<details>
-<summary>Báo lỗi, góp ý ở đâu?</summary>
-<div class="ans"><p class="muted">Nhóm Telegram <a href="https://t.me/tivikit" style="color: var(--accent); text-decoration: none">t.me/tivikit</a>, hoặc mục Issues trên <a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/issues" style="color: var(--accent); text-decoration: none">GitHub</a> — ghi rõ máy, bản iOS và phim gặp lỗi.</p></div>
-</details>
+<div class="q" id="chua-jailbreak"><h3>Máy chưa jailbreak cài được không?</h3>
+<div class="ans"><p class="muted">Không. iOS 6 chỉ cài được app ngoài App Store khi đã jailbreak. Máy iOS 6.1.3 – 6.1.6 jailbreak bằng p0sixspwn, iOS 6.0 – 6.1.2 bằng evasi0n (cần máy tính). Jailbreak là việc của bạn — hãy sao lưu máy trước.</p></div></div>
+<div class="q"><h3>Bấm «Thêm vào Cydia» mà không thấy gì?</h3>
+<div class="ans"><p class="muted">Nút chỉ chạy khi mở trang bằng Safari trên chính iPhone / iPad đã có Cydia. Không được thì thêm tay: Cydia → <strong>Nguồn</strong> → <strong>Sửa</strong> → <strong>Thêm</strong>, gõ <code>https://conbangtvlegacy.github.io/repo/</code>.</p></div></div>
+<div class="q"><h3>App có mất phí, có quảng cáo không?</h3>
+<div class="ans"><p class="muted">Miễn phí, không tài khoản, không quảng cáo của app. Đoạn quảng cáo chèn giữa phim trong luồng HLS được app cắt bỏ; quảng cáo nằm sẵn trong các trang phim thì app không hiển thị trang web nên cũng không thấy.</p></div></div>
+<div class="q"><h3>Video không phát hoặc báo lỗi?</h3>
+<div class="ans"><p class="muted">Chạm vào video cho hiện nút, bấm <strong>Server</strong> và chọn server khác — app nhớ server nào chạy được cho lần sau. Phim mà mọi server chỉ có trình phát nhúng thì iOS 6 không phát được (xem <a href="#gioi-han" class="acc">Những gì iOS 6 không làm được</a>); tìm phim đó ở trang khác bằng ô tìm kiếm.</p></div></div>
+<div class="q"><h3>Trang phim không vào được?</h3>
+<div class="ans"><p class="muted">Thường là nhà mạng chặn. DNS mã hoá và vượt chặn đã có trong <strong>Cài đặt → Mạng</strong>; vẫn không được thì đổi trang phim khác trong <strong>Cài đặt → Trang phim</strong>, hoặc dùng proxy SOCKS5 / Shadowsocks.</p></div></div>
+<div class="q"><h3>Cập nhật app thế nào?</h3>
+<div class="ans"><p class="muted">Không cần làm gì: mở app là app tự kiểm tra, có bản mới thì hỏi; bấm <strong>Cập nhật</strong> là app tải, cài và mở lại. Kiểm tra tay ở <strong>Cài đặt → Phiên bản</strong>. Đã thêm nguồn Cydia thì cập nhật trong Cydia cũng được. Bản cài trước 0.4.0 chưa có tự cập nhật — cài bản mới một lần bằng Cydia hoặc tệp .deb.</p></div></div>
+<div class="q"><h3>Không thấy biểu tượng sau khi cài bằng tệp .deb?</h3>
+<div class="ans"><p class="muted">Chạy <code>su mobile -c uicache</code> qua SSH, hoặc khởi động lại màn hình chính (respring). Đừng chạy uicache lúc app đang mở.</p></div></div>
+<div class="q"><h3>Có an toàn không?</h3>
+<div class="ans"><p class="muted">Mã nguồn công khai trên GitHub, ai cũng xem được app làm gì. Máy jailbreak nên đổi mật khẩu SSH mặc định (<code>alpine</code>) bằng lệnh <code>passwd</code>. App chỉ là trình xem: không lưu trữ, không tải lên, không phát tán phim.</p></div></div>
+<div class="q"><h3>Báo lỗi, góp ý ở đâu?</h3>
+<div class="ans"><p class="muted">Nhóm Telegram <a href="https://t.me/tivikit" class="acc">t.me/tivikit</a>, hoặc mục Issues trên <a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/issues" class="acc">GitHub</a> — ghi rõ máy, bản iOS và phim gặp lỗi.</p></div></div>
 </div>
-</section>
+</div>
 
-<section class="wrap" style="padding-top: clamp(72px, 10vw, 132px)">
-<div class="card" style="padding: clamp(40px, 7vw, 88px) clamp(24px, 5vw, 64px); border-radius: 32px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
-<img src="assets/logo.png" alt="" style="width: 76px; height: 76px; border-radius: 18px; display: block">
-<h2 style="margin: 0; max-width: 20ch; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.12; letter-spacing: -0.03em; font-weight: 700; text-wrap: balance">Lấy lại chiếc iPad cũ để xem phim.</h2>
-<p class="lead" style="max-width: 44ch">Miễn phí. Không tài khoản, không công cụ theo dõi.</p>
-<div style="display: flex; align-items: center; justify-content: center; gap: 12px 16px; flex-wrap: wrap">
-<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" class="btn">Thêm vào Cydia</a>
-<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn-ghost js-deb">Tải tệp .deb</a>
+<div class="wrap">
+<div class="card cta">
+<img src="assets/logo.png" alt="">
+<h2>Lấy lại chiếc iPad cũ để xem phim.</h2>
+<p class="lead">Miễn phí. Không tài khoản, không công cụ theo dõi.</p>
+<div style="margin-top:18px">
+<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" class="btn">Thêm vào Cydia</a><a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn-ghost js-deb">Tải tệp .deb</a>
 </div>
 </div>
-</section>
+</div>
 
-<footer class="wrap" style="padding-top: clamp(48px, 7vw, 80px); padding-bottom: 56px; display: flex; flex-direction: column; gap: 20px">
-<nav aria-label="Liên kết" style="display: flex; gap: 4px 24px; flex-wrap: wrap">
-<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Các bản phát hành</a>
-<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Mã nguồn</a>
-<a href="https://conbangtv.github.io/" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Côn Bằng TV cho tivi, Windows, Mac, Linux, iPad mới</a>
-<a href="https://t.me/tivikit" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none">Telegram</a>
-</nav>
-<p style="margin: 0; max-width: 78ch; font-size: 14px; line-height: 1.65; color: var(--dim)">Côn Bằng TV Legacy chỉ là trình xem các trang phim công khai trên Internet. App không lưu trữ, không tải lên và không phát tán phim; mọi nội dung do trang web bên thứ ba cung cấp. Tên phim, hình ảnh và nhãn hiệu thuộc về chủ sở hữu hợp pháp. Côn Bằng TV Legacy không liên kết với Apple, trang web, hãng phim hay nhà phát hành nào. Jailbreak có thể làm mất bảo hành và tự chịu rủi ro.</p>
+<footer class="wrap">
+<div class="links"><a href="https://conbangtvlegacy.github.io/repo/">Nguồn Cydia</a><a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases">Các bản phát hành</a><a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy">Mã nguồn</a><a href="https://conbangtv.github.io/">Côn Bằng TV cho tivi, Windows, Mac, Linux, iPad mới</a><a href="https://t.me/tivikit">Telegram</a></div>
+<p>Côn Bằng TV Legacy chỉ là trình xem các trang phim công khai trên Internet. App không lưu trữ, không tải lên và không phát tán phim; mọi nội dung do trang web bên thứ ba cung cấp. Tên phim, hình ảnh và nhãn hiệu thuộc về chủ sở hữu hợp pháp. Côn Bằng TV Legacy không liên kết với Apple, trang web, hãng phim hay nhà phát hành nào. Jailbreak có thể làm mất bảo hành và tự chịu rủi ro.</p>
 </footer>
 
 </div>
-<a class="to-top" href="#top" aria-label="Về đầu trang" title="Về đầu trang"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="M6 11l6-6 6 6"></path></svg></a>
+<a class="to-top" href="#top" title="Về đầu trang">&#8593;</a>
 <script>
-(function(){
-var b=document.querySelector('.to-top');
-if(b){
-function u(){b.classList.toggle('is-hidden',window.scrollY<600)}
-u();addEventListener('scroll',u,{passive:true});
-b.addEventListener('click',function(e){
-e.preventDefault();
-var calm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-window.scrollTo({top:0,behavior:calm?'auto':'smooth'});
-if(history.replaceState)history.replaceState(null,'',location.pathname+location.search);
-});
-}
-// Nút tải: lấy bản mới nhất từ GitHub (tên tệp có số bản) — lỗi mạng thì giữ link tới trang Releases
-if(window.fetch){
-fetch('https://api.github.com/repos/ConBangTVLegacy/ConBangTV-Legacy/releases/latest',{headers:{Accept:'application/vnd.github+json'}})
-.then(function(r){return r.ok?r.json():null}).then(function(rel){
-if(!rel)return;
-var a=(rel.assets||[]).filter(function(x){return /_iphoneos-arm\.deb$/.test(x.name)})[0];
-if(!a)return;
-var v=(rel.tag_name||'').replace(/^v/,''),mb=(a.size/1048576).toFixed(1).replace('.',',');
-document.querySelectorAll('a.js-deb').forEach(function(l){l.href=a.browser_download_url;if(l.classList.contains('btn-ghost'))l.textContent='Tải .deb '+v+' ('+mb+' MB)'});
-document.querySelectorAll('.js-ver').forEach(function(p){p.textContent='Bản '+v+' · '+new Date(rel.published_at).toLocaleDateString('vi-VN')+' · iOS 6.0 trở lên, đã jailbreak'});
-}).catch(function(){});
-}
-var h=location.hash&&document.querySelector('.faq '+location.hash);if(h&&h.tagName==='DETAILS')h.open=true;
+// ES5 cho Safari iOS 6: không fetch / Promise / =>; NodeList duyệt bằng vòng for
+(function () {
+  var html = document.documentElement;
+  html.className += ' js';
+  // Hỏi đáp: bấm câu hỏi để mở / đóng; #địa-chỉ mở sẵn câu đó
+  var qs = document.querySelectorAll('.faq .q');
+  for (var i = 0; i < qs.length; i++) {
+    (function (q) {
+      q.getElementsByTagName('h3')[0].addEventListener('click', function () {
+        q.className = /\bopen\b/.test(q.className) ? q.className.replace(/\s*\bopen\b/, '') : q.className + ' open';
+      }, false);
+    })(qs[i]);
+  }
+  if (location.hash) {
+    var h = document.getElementById(location.hash.substring(1));
+    if (h && /\bq\b/.test(h.className)) h.className += ' open';
+  }
+  // Nút về đầu trang
+  var top = document.querySelector('.to-top');
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    top.className = y > 600 ? 'to-top show' : 'to-top';
+  }
+  window.addEventListener('scroll', onScroll, false);
+  onScroll();
+  top.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo(0, 0); }, false);
+  // Nút tải: lấy bản mới nhất từ GitHub (tên tệp có số bản); lỗi mạng thì giữ link tới trang Releases
+  try {
+    var x = new XMLHttpRequest();
+    x.open('GET', 'https://api.github.com/repos/ConBangTVLegacy/ConBangTV-Legacy/releases/latest', true);
+    x.onreadystatechange = function () {
+      if (x.readyState !== 4 || x.status !== 200) return;
+      var rel = JSON.parse(x.responseText), a = null, assets = rel.assets || [];
+      for (var j = 0; j < assets.length; j++) if (/_iphoneos-arm\.deb$/.test(assets[j].name)) a = assets[j];
+      if (!a) return;
+      var v = (rel.tag_name || '').replace(/^v/, ''), mb = (a.size / 1048576).toFixed(1).replace('.', ',');
+      var links = document.querySelectorAll('a.js-deb');
+      for (var k = 0; k < links.length; k++) {
+        links[k].href = a.browser_download_url;
+        if (/btn-ghost/.test(links[k].className)) links[k].innerHTML = 'Tải .deb ' + v + ' (' + mb + ' MB)';
+      }
+      var d = new Date(rel.published_at), vs = document.querySelectorAll('.js-ver');
+      for (var m = 0; m < vs.length; m++) vs[m].innerHTML = 'Bản ' + v + ' · ' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear() + ' · iOS 6.0 trở lên, đã jailbreak';
+    };
+    x.send();
+  } catch (e) {}
 })();
 </script>
 </body>
