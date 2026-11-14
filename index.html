@@ -123,10 +123,11 @@ pre{margin:0;padding:14px 16px;background:var(--bg);border:1px solid var(--edge)
 <h1 style="margin: 0; max-width: 20ch; font-size: clamp(40px, 7.2vw, 88px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 700; text-wrap: balance">Máy cũ vẫn xem phim&nbsp;mượt.</h1>
 <p class="lead" style="max-width: 56ch; font-size: clamp(17px, 1.9vw, 21px)">iPhone, iPad đời iOS 6 không còn cài được app xem phim nào. <strong>Côn Bằng TV Legacy</strong> viết riêng cho chúng: gom phim từ nhiều trang về một trang chủ, phát bằng chip giải mã của máy nên 1080p vẫn mượt, đồng bộ lịch sử với tivi và các máy khác trong nhà — và tự cập nhật.</p>
 <div style="display: flex; align-items: center; justify-content: center; gap: 12px 16px; flex-wrap: wrap; margin-top: 8px">
-<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn js-deb">Tải bản mới nhất (.deb)</a>
-<a href="#cai-dat" class="btn-ghost">Cách cài</a>
+<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" class="btn">Thêm vào Cydia</a>
+<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn-ghost js-deb">Tải tệp .deb</a>
 </div>
-<p class="small js-ver" style="margin-top: -8px">Bản mới nhất ở GitHub Releases</p>
+<p class="small" style="margin-top: -8px; max-width: 46ch">Mở trang này bằng Safari trên iPhone / iPad đã jailbreak rồi bấm <strong>Thêm vào Cydia</strong> — hoặc <a href="#cai-dat" style="color: var(--accent); text-decoration: none">xem cách cài</a>.</p>
+<p class="small js-ver" style="margin-top: -18px">Bản mới nhất ở GitHub Releases</p>
 </section>
 
 <div class="wrap">
@@ -147,26 +148,36 @@ pre{margin:0;padding:14px 16px;background:var(--bg);border:1px solid var(--edge)
 <div class="head">
 <p class="eyebrow">Cài đặt</p>
 <h2 class="h2">Cài một lần, các bản sau tự lên.</h2>
-<p class="lead">Máy cần đã jailbreak (Cydia). App là một gói <code>.deb</code> như các tweak khác — cài bằng máy tính qua SSH, hoặc ngay trên máy bằng iFile / Filza.</p>
+<p class="lead">Máy cần đã jailbreak (có Cydia). Cách dễ nhất: thêm nguồn Cydia của app rồi bấm Cài — làm ngay trên iPhone / iPad, không cần máy tính.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 24px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 24px">
 <div class="card install">
-<h3>Cài lần đầu</h3>
+<h3>Cách 1 — Cydia <span class="tag ok" style="vertical-align: middle; margin: 0 0 0 6px">khuyên dùng</span></h3>
+<ol class="steps">
+<li><div><span>Trên iPhone / iPad, mở trang này bằng <strong>Safari</strong> rồi bấm <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" style="color: var(--accent); text-decoration: none">Thêm vào Cydia</a>. Hoặc trong Cydia: <strong>Nguồn → Sửa → Thêm</strong>, gõ:</span>
+<pre>https://conbangtvlegacy.github.io/repo/</pre></div></li>
+<li><div><span>Chờ Cydia tải nguồn xong, tìm <strong>Côn Bằng TV</strong>, bấm <strong>Cài đặt</strong> → <strong>Xác nhận</strong>.</span></div></li>
+<li><div><span><strong>Mở «Côn Bằng TV»</strong> trên màn hình chính, đọc và đồng ý phần miễn trừ trách nhiệm — thế là xem được.</span></div></li>
+</ol>
+</div>
+<div class="card install">
+<h3>Cách 2 — tệp .deb</h3>
 <ol class="steps">
 <li><div><span><strong>Tải tệp .deb.</strong> Bấm <a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="js-deb" style="color: var(--accent); text-decoration: none">Tải bản mới nhất</a> trên máy tính (Safari của iOS 6 thường không mở được GitHub nữa).</span></div></li>
 <li><div><span><strong>Chép sang máy và cài.</strong> Máy có <strong>OpenSSH</strong> (cài trong Cydia) thì trên máy tính chạy, thay <code>IP-máy</code> bằng địa chỉ Wi-Fi của iPhone / iPad (Cài đặt → Wi-Fi → ⓘ):</span>
 <pre>scp vn.conbangtv.legacy_*.deb root@IP-máy:/tmp/
 ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c uicache"</pre>
 <span>Hoặc chép tệp vào máy (iTunes / iFunBox / AirDrop của jailbreak), mở bằng <strong>iFile</strong> hay <strong>Filza</strong> rồi chọn <strong>Cài đặt</strong>; chưa thấy biểu tượng thì khởi động lại màn hình chính (respring).</span></div></li>
-<li><div><span><strong>Mở «Côn Bằng TV»</strong> trên màn hình chính. Lần đầu đọc và đồng ý phần miễn trừ trách nhiệm, thế là xem được.</span></div></li>
 </ol>
 <p class="small">Mật khẩu SSH mặc định của máy jailbreak là <code>alpine</code> — nên đổi bằng lệnh <code>passwd</code> (cả tài khoản <code>root</code> lẫn <code>mobile</code>) để người cùng mạng Wi-Fi không vào được máy.</p>
+</div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 24px">
 <div class="card install">
 <h3>Các bản sau: tự cập nhật</h3>
 <p class="muted">Mở app là app tự kiểm tra bản mới trên GitHub (tối đa vài giờ một lần). Có bản mới thì hiện hộp <strong>«Có bản mới»</strong> kèm những thay đổi chính; bấm <strong>Cập nhật</strong>: app tải về, kiểm tra tệp, cài đè rồi tự mở lại sau vài giây — lịch sử, người xem và cài đặt giữ nguyên.</p>
-<p class="muted">Kiểm tra tay: <strong>Cài đặt → Phiên bản</strong>. Đang xem phim thì app không hỏi giữa chừng.</p>
+<p class="muted">Kiểm tra tay: <strong>Cài đặt → Phiên bản</strong>. Đang xem phim thì app không hỏi giữa chừng. Cài bằng Cydia thì bản mới cũng hiện trong mục <strong>Thay đổi</strong> (Changes) của Cydia.</p>
 </div>
 <div class="card install">
 <h3>Cần gì</h3>
@@ -426,10 +437,10 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 </details>
 <details>
 <summary>Cập nhật app thế nào?</summary>
-<div class="ans"><p class="muted">Không cần làm gì: mở app là app tự kiểm tra, có bản mới thì hỏi; bấm <strong>Cập nhật</strong> là app tải, cài và mở lại. Kiểm tra tay ở <strong>Cài đặt → Phiên bản</strong>. Bản cài trước 0.4.0 chưa có tự cập nhật — cài tay bản mới một lần.</p></div>
+<div class="ans"><p class="muted">Không cần làm gì: mở app là app tự kiểm tra, có bản mới thì hỏi; bấm <strong>Cập nhật</strong> là app tải, cài và mở lại. Kiểm tra tay ở <strong>Cài đặt → Phiên bản</strong>. Đã thêm nguồn Cydia thì cập nhật trong Cydia cũng được. Bản cài trước 0.4.0 chưa có tự cập nhật — cài bản mới một lần bằng Cydia hoặc tệp .deb.</p></div>
 </details>
 <details>
-<summary>Không thấy biểu tượng sau khi cài?</summary>
+<summary>Không thấy biểu tượng sau khi cài bằng tệp .deb?</summary>
 <div class="ans"><p class="muted">Chạy <code>su mobile -c uicache</code> qua SSH, hoặc khởi động lại màn hình chính (respring) bằng Cydia / SBSettings. Đừng chạy uicache lúc app đang mở.</p></div>
 </details>
 <details>
@@ -449,8 +460,8 @@ ssh root@IP-máy "dpkg -i /tmp/vn.conbangtv.legacy_*.deb &amp;&amp; su mobile -c
 <h2 style="margin: 0; max-width: 20ch; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.12; letter-spacing: -0.03em; font-weight: 700; text-wrap: balance">Lấy lại chiếc iPad cũ để xem phim.</h2>
 <p class="lead" style="max-width: 44ch">Miễn phí. Không tài khoản, không công cụ theo dõi.</p>
 <div style="display: flex; align-items: center; justify-content: center; gap: 12px 16px; flex-wrap: wrap">
-<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn js-deb">Tải bản mới nhất (.deb)</a>
-<a href="#cai-dat" class="btn-ghost">Cách cài</a>
+<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://conbangtvlegacy.github.io/repo/" class="btn">Thêm vào Cydia</a>
+<a href="https://github.com/ConBangTVLegacy/ConBangTV-Legacy/releases/latest" class="btn-ghost js-deb">Tải tệp .deb</a>
 </div>
 </div>
 </section>
@@ -488,7 +499,7 @@ if(!rel)return;
 var a=(rel.assets||[]).filter(function(x){return /_iphoneos-arm\.deb$/.test(x.name)})[0];
 if(!a)return;
 var v=(rel.tag_name||'').replace(/^v/,''),mb=(a.size/1048576).toFixed(1).replace('.',',');
-document.querySelectorAll('a.js-deb').forEach(function(l){l.href=a.browser_download_url;if(l.classList.contains('btn'))l.textContent='Tải bản '+v+' (.deb, '+mb+' MB)'});
+document.querySelectorAll('a.js-deb').forEach(function(l){l.href=a.browser_download_url;if(l.classList.contains('btn-ghost'))l.textContent='Tải .deb '+v+' ('+mb+' MB)'});
 document.querySelectorAll('.js-ver').forEach(function(p){p.textContent='Bản '+v+' · '+new Date(rel.published_at).toLocaleDateString('vi-VN')+' · iOS 6.0 trở lên, đã jailbreak'});
 }).catch(function(){});
 }

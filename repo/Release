@@ -1,0 +1,16 @@
+Origin: Côn Bằng TV Legacy
+Label: Côn Bằng TV Legacy
+Suite: stable
+Version: 1.0
+Codename: ios6
+Architectures: iphoneos-arm
+Components: main
+Description: Côn Bằng TV cho iPhone / iPad iOS 6 đã jailbreak — https://conbangtvlegacy.github.io
+MD5Sum:
+ d275865ce9ba947e51c5d37375a50908 750 Packages
+ b104c6f816dc45d1f1a3bf4796d9c5da 510 Packages.gz
+ a54dea65a067d89a66272ba2f3f6c2e3 582 Packages.bz2
+SHA256:
+ 1e387a4bf87ce8f03f85223f60ab672dfb8498912cd8363686563dbbd4790523 750 Packages
+ 452ce9886aa6b1436f7d0883911def1912ef0e2124a4ab2434748e12229e4d19 510 Packages.gz
+ 6d700a2402726f4c0cc2e0bd90fee2a7bb792ce933e707e3b423a9689c1c7abc 582 Packages.bz2
