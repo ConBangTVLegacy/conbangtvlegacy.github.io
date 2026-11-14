@@ -16,3 +16,21 @@ Author: Côn Bằng TV Legacy
 Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
 Name: Côn Bằng TV Legacy
 
+Package: vn.conbangtv.legacy
+Version: 0.4.2
+Architecture: iphoneos-arm
+Maintainer: Côn Bằng TV Legacy
+Installed-Size: 10880
+Depends: firmware (>= 6.0), uikittools
+Filename: debs/vn.conbangtv.legacy_0.4.2_iphoneos-arm.deb
+Size: 5275706
+MD5sum: a89d1561b6686976e0e22da40574d179
+SHA1: ee77e4e70c85d5ae46ca7b4a4e1c9990df38fdd6
+SHA256: 6c0e7f125d427072aed0cccf28a2f516efed0772af92dce32bd6da06c3cf331c
+Section: Multimedia
+Homepage: https://conbangtvlegacy.github.io/
+Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 6. Tự cập nhật, đồng bộ với tivi.
+Author: Côn Bằng TV Legacy
+Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
+Name: Côn Bằng TV Legacy
+
