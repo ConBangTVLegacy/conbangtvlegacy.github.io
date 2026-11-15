@@ -1,22 +1,4 @@
 Package: vn.conbangtv.legacy
-Version: 0.4.4
-Architecture: iphoneos-arm
-Maintainer: Côn Bằng TV Legacy
-Installed-Size: 11424
-Depends: firmware (>= 6.0), uikittools
-Filename: debs/vn.conbangtv.legacy_0.4.4_iphoneos-arm.deb
-Size: 5829670
-MD5sum: 57faae276d7d4a9050cbc34e705ba422
-SHA1: 6de8a3eb739c30468b44e4a962c300cd010aa7eb
-SHA256: c8502248e73ad3f13310b6fc07be93c3e546288338a0baeb07ba2ba315f8ed09
-Section: Multimedia
-Homepage: https://conbangtvlegacy.github.io/
-Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 6. Tự cập nhật, đồng bộ với tivi.
-Author: Côn Bằng TV Legacy
-Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
-Name: Côn Bằng TV Legacy
-
-Package: vn.conbangtv.legacy
 Version: 0.4.5
 Architecture: iphoneos-arm
 Maintainer: Côn Bằng TV Legacy
@@ -50,5 +32,24 @@ Homepage: https://conbangtvlegacy.github.io/
 Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 6. Tự cập nhật, đồng bộ với tivi.
 Author: Côn Bằng TV Legacy
 Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
+Name: Côn Bằng TV Legacy
+
+Package: vn.conbangtv.legacy
+Version: 0.4.7
+Architecture: iphoneos-arm
+Maintainer: Côn Bằng TV Legacy
+Installed-Size: 11488
+Depends: firmware (>= 6.0), uikittools
+Filename: debs/vn.conbangtv.legacy_0.4.7_iphoneos-arm.deb
+Size: 5853096
+MD5sum: 12c7176d2bb60a85524ce8d4cc77704b
+SHA1: f2a0a980c677efa865fbcf092c8d0e476f56d72d
+SHA256: 706adba046af20dab295607ba5ae18a0dbc5ae697d25457a7c764f7a270f388d
+Section: Multimedia
+Homepage: https://conbangtvlegacy.github.io/
+Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 6. Tự cập nhật, đồng bộ với tivi.
+Author: Côn Bằng TV Legacy
+Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
+Icon: file:///Applications/ConBangTV.app/Icon@2x.png
 Name: Côn Bằng TV Legacy
 
