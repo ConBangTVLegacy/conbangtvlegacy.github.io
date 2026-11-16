@@ -1,23 +1,4 @@
 Package: vn.conbangtv.legacy
-Version: 0.5.0
-Architecture: iphoneos-arm
-Maintainer: Côn Bằng TV Legacy
-Installed-Size: 11708
-Depends: firmware (>= 5.0), uikittools
-Filename: debs/vn.conbangtv.legacy_0.5.0_iphoneos-arm.deb
-Size: 5987794
-MD5sum: 9d6e7535046907c6e8edd711548a2ed6
-SHA1: 1e4931e555b73a63531991ebb138150db5034a37
-SHA256: 6c68ebb0068bbbb6af0920c652f77e57518533eb427e9ee8b72759b555cc8323
-Section: Multimedia
-Homepage: https://conbangtvlegacy.github.io/
-Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 5 / iOS 6. Tự cập nhật, đồng bộ với tivi.
-Author: Côn Bằng TV Legacy
-Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
-Icon: file:///Applications/ConBangTV.app/Icon@2x.png
-Name: Côn Bằng TV Legacy
-
-Package: vn.conbangtv.legacy
 Version: 0.5.1
 Architecture: iphoneos-arm
 Maintainer: Côn Bằng TV Legacy
@@ -47,6 +28,25 @@ Size: 5994458
 MD5sum: 27c11fdb01eb08c5c5858f86c0653146
 SHA1: e58760790960e8f0f126142cf56fe2dba28836e2
 SHA256: 653af8127ca8f410d10eccbbd6f87c9a751203028e24074db968b82062d58457
+Section: Multimedia
+Homepage: https://conbangtvlegacy.github.io/
+Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 5 / iOS 6. Tự cập nhật, đồng bộ với tivi.
+Author: Côn Bằng TV Legacy
+Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
+Icon: file:///Applications/ConBangTV.app/Icon@2x.png
+Name: Côn Bằng TV Legacy
+
+Package: vn.conbangtv.legacy
+Version: 0.5.3
+Architecture: iphoneos-arm
+Maintainer: Côn Bằng TV Legacy
+Installed-Size: 11908
+Depends: firmware (>= 5.0), uikittools
+Filename: debs/vn.conbangtv.legacy_0.5.3_iphoneos-arm.deb
+Size: 6095076
+MD5sum: 394fa7bac5c66279687938061cb7d164
+SHA1: 6022d1b43a9b8f830466007ec08548388f034e9c
+SHA256: 377e1a9fc3651b1e8123b2848d2387eec7cd1fc43759e05b1098fab05d8d91aa
 Section: Multimedia
 Homepage: https://conbangtvlegacy.github.io/
 Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 5 / iOS 6. Tự cập nhật, đồng bộ với tivi.
