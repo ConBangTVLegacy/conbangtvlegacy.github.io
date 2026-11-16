@@ -18,25 +18,6 @@ Icon: file:///Applications/ConBangTV.app/Icon@2x.png
 Name: Côn Bằng TV Legacy
 
 Package: vn.conbangtv.legacy
-Version: 0.4.9
-Architecture: iphoneos-arm
-Maintainer: Côn Bằng TV Legacy
-Installed-Size: 11692
-Depends: firmware (>= 6.0), uikittools
-Filename: debs/vn.conbangtv.legacy_0.4.9_iphoneos-arm.deb
-Size: 5971552
-MD5sum: be03077d61ff2ece6b9787938aeba489
-SHA1: 169dc944c46d8c6dbd481671db119bbc8106ffe2
-SHA256: dd5fc69c957a5072dc0e7d35f97d128cbb75d245bb9c467f54060502bdd593fe
-Section: Multimedia
-Homepage: https://conbangtvlegacy.github.io/
-Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 6. Tự cập nhật, đồng bộ với tivi.
-Author: Côn Bằng TV Legacy
-Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
-Icon: file:///Applications/ConBangTV.app/Icon@2x.png
-Name: Côn Bằng TV Legacy
-
-Package: vn.conbangtv.legacy
 Version: 0.5.0
 Architecture: iphoneos-arm
 Maintainer: Côn Bằng TV Legacy
@@ -47,6 +28,25 @@ Size: 5987794
 MD5sum: 9d6e7535046907c6e8edd711548a2ed6
 SHA1: 1e4931e555b73a63531991ebb138150db5034a37
 SHA256: 6c68ebb0068bbbb6af0920c652f77e57518533eb427e9ee8b72759b555cc8323
+Section: Multimedia
+Homepage: https://conbangtvlegacy.github.io/
+Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 5 / iOS 6. Tự cập nhật, đồng bộ với tivi.
+Author: Côn Bằng TV Legacy
+Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
+Icon: file:///Applications/ConBangTV.app/Icon@2x.png
+Name: Côn Bằng TV Legacy
+
+Package: vn.conbangtv.legacy
+Version: 0.5.1
+Architecture: iphoneos-arm
+Maintainer: Côn Bằng TV Legacy
+Installed-Size: 11708
+Depends: firmware (>= 5.0), uikittools
+Filename: debs/vn.conbangtv.legacy_0.5.1_iphoneos-arm.deb
+Size: 5988314
+MD5sum: e66cf7990c7078b3cf4b393112389bae
+SHA1: 5e08356d0ca3cbeb0602202b878720b45fe075fa
+SHA256: a08822a044bf2c2fd74f1488e609ba33e75340a7bbbbfba43216ed33ad7c9fea
 Section: Multimedia
 Homepage: https://conbangtvlegacy.github.io/
 Description: Xem phim từ nhiều trang phim, gom về một trang chủ — Côn Bằng TV cho iPhone / iPad iOS 5 / iOS 6. Tự cập nhật, đồng bộ với tivi.
