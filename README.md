@@ -1,6 +1,6 @@
 # Trang giới thiệu Côn Bằng TV Legacy
 
-Mã nguồn của trang <https://conbangtvlegacy.github.io> — Côn Bằng TV cho iPhone / iPad / iPod touch **iOS 6** đã jailbreak.
+Mã nguồn của trang <https://conbangtvlegacy.github.io> — Côn Bằng TV cho iPhone / iPad / iPod touch **iOS 5 / iOS 6** đã jailbreak.
 Tệp HTML tĩnh (`index.html`) và ảnh trong `assets/`, đăng bằng GitHub Pages từ nhánh `main`.
 
 - Ảnh chụp thật trên iPhone 5 (iOS 6.1.4) và iPad mini 1 (iOS 6.1.3), bản 0.4.0 — cắt thanh trạng thái, xoay ảnh màn ngang.
