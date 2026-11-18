@@ -1,23 +1,4 @@
 Package: vn.conbangtv.legacy
-Version: 0.5.5
-Architecture: iphoneos-arm
-Maintainer: Côn Bằng TV Legacy
-Installed-Size: 12156
-Depends: firmware (>= 5.0), uikittools
-Filename: debs/vn.conbangtv.legacy_0.5.5_iphoneos-arm.deb
-Size: 6197324
-MD5sum: 77dff419fbe263052300bca7aa2b100a
-SHA1: 5667c8a47b458597dfd05eaa0f065961350025d4
-SHA256: 544013a4da8c7ccfa0978dba49990e9cbc19c5164750dd802f171a08f02e30d3
-Section: Multimedia
-Homepage: https://conbangtvlegacy.github.io/
-Description: Xem phim tu nhieu trang phim, gom ve mot trang chu - Con Bang TV cho iPhone / iPad iOS 5 / iOS 6. Tu cap nhat, dong bo voi tivi.
-Author: Côn Bằng TV Legacy
-Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
-Icon: file:///Applications/ConBangTV.app/Icon@2x.png
-Name: Côn Bằng TV Legacy
-
-Package: vn.conbangtv.legacy
 Version: 0.5.6
 Architecture: iphoneos-arm
 Maintainer: Côn Bằng TV Legacy
@@ -47,6 +28,25 @@ Size: 6205494
 MD5sum: 783a71653f4f1b5a1a761c0311442818
 SHA1: e5b747bcde8ab9362f0481ef3bdcc665d3bb0084
 SHA256: 34792cf80a39be30fe7260d82c3567803c9184db11a754ffa2ed875c8c14edea
+Section: Multimedia
+Homepage: https://conbangtvlegacy.github.io/
+Description: Xem phim tu nhieu trang phim, gom ve mot trang chu - Con Bang TV cho iPhone / iPad iOS 5 / iOS 6. Tu cap nhat, dong bo voi tivi.
+Author: Côn Bằng TV Legacy
+Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
+Icon: file:///Applications/ConBangTV.app/Icon@2x.png
+Name: Côn Bằng TV Legacy
+
+Package: vn.conbangtv.legacy
+Version: 0.5.8
+Architecture: iphoneos-arm
+Maintainer: Côn Bằng TV Legacy
+Installed-Size: 12208
+Depends: firmware (>= 5.0), uikittools
+Filename: debs/vn.conbangtv.legacy_0.5.8_iphoneos-arm.deb
+Size: 6223030
+MD5sum: c5f6f1cfb902a28810b0756c05e4220d
+SHA1: c15c3059b2534311b8c207b0edd6d2b800f4f236
+SHA256: d106906c57313b462efe91d7aaafc28d0e4b259f77110cfdea4986d0260ef1d4
 Section: Multimedia
 Homepage: https://conbangtvlegacy.github.io/
 Description: Xem phim tu nhieu trang phim, gom ve mot trang chu - Con Bang TV cho iPhone / iPad iOS 5 / iOS 6. Tu cap nhat, dong bo voi tivi.
