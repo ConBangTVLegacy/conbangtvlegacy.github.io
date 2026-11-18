@@ -1,21 +1,20 @@
-Package: vn.conbangtv.legacy
-Version: 0.5.6
+Package: vn.conbangtv.float
+Version: 0.1.0
 Architecture: iphoneos-arm
 Maintainer: Côn Bằng TV Legacy
-Installed-Size: 12172
-Depends: firmware (>= 5.0), uikittools
-Filename: debs/vn.conbangtv.legacy_0.5.6_iphoneos-arm.deb
-Size: 6201884
-MD5sum: f7c8733a6a5075bccb48bf8d2979d56d
-SHA1: 0d6b940bdeba8ecda709913d1ed5596a212b05e4
-SHA256: 3f37ad11b483f90e0705043f924f1b2c09be024d64edb7c9697d2477dfabe255
-Section: Multimedia
+Installed-Size: 76
+Depends: mobilesubstrate, firmware (>= 8.0), vn.conbangtv.legacy (>= 0.5.9)
+Filename: debs/vn.conbangtv.float_0.1.0_iphoneos-arm.deb
+Size: 14572
+MD5sum: 7c469d7558fd9feb9dde9c6fafbbf1cf
+SHA1: 8f3d4df11a38af15cf3e5e6f8152cf022c62287b
+SHA256: cd560086fcbcde4a5399bd22b10cd02fad12bb91e3cb49821b439f8790a166ed
+Section: Tweaks
 Homepage: https://conbangtvlegacy.github.io/
-Description: Xem phim tu nhieu trang phim, gom ve mot trang chu - Con Bang TV cho iPhone / iPad iOS 5 / iOS 6. Tu cap nhat, dong bo voi tivi.
+Description: Hinh trong hinh cho Con Bang TV Legacy tren iOS 8: dang xem phim / kenh, bam "Hinh noi" - video thanh khung nho noi tren man hinh chinh va app khac. Can khoi dong lai SpringBoard sau khi cai.
 Author: Côn Bằng TV Legacy
 Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
-Icon: file:///Applications/ConBangTV.app/Icon@2x.png
-Name: Côn Bằng TV Legacy
+Name: Côn Bằng TV Legacy — Hình nổi
 
 Package: vn.conbangtv.legacy
 Version: 0.5.7
@@ -47,6 +46,25 @@ Size: 6223030
 MD5sum: c5f6f1cfb902a28810b0756c05e4220d
 SHA1: c15c3059b2534311b8c207b0edd6d2b800f4f236
 SHA256: d106906c57313b462efe91d7aaafc28d0e4b259f77110cfdea4986d0260ef1d4
+Section: Multimedia
+Homepage: https://conbangtvlegacy.github.io/
+Description: Xem phim tu nhieu trang phim, gom ve mot trang chu - Con Bang TV cho iPhone / iPad iOS 5 / iOS 6. Tu cap nhat, dong bo voi tivi.
+Author: Côn Bằng TV Legacy
+Depiction: https://conbangtvlegacy.github.io/repo/depiction.html
+Icon: file:///Applications/ConBangTV.app/Icon@2x.png
+Name: Côn Bằng TV Legacy
+
+Package: vn.conbangtv.legacy
+Version: 0.5.9
+Architecture: iphoneos-arm
+Maintainer: Côn Bằng TV Legacy
+Installed-Size: 12224
+Depends: firmware (>= 5.0), uikittools
+Filename: debs/vn.conbangtv.legacy_0.5.9_iphoneos-arm.deb
+Size: 6228944
+MD5sum: 8866ee27c63cd0060cffb3ef8457ed32
+SHA1: 92fd79d50dba27586fd84d9555d83aa39d5fe83c
+SHA256: f72952cdecf3748b7df32f04a2f4c635fa7517fcdfd8961a88fcb9c835b80b0d
 Section: Multimedia
 Homepage: https://conbangtvlegacy.github.io/
 Description: Xem phim tu nhieu trang phim, gom ve mot trang chu - Con Bang TV cho iPhone / iPad iOS 5 / iOS 6. Tu cap nhat, dong bo voi tivi.
