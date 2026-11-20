@@ -7,10 +7,10 @@ Architectures: iphoneos-arm
 Components: main
 Description: Côn Bằng TV cho iPhone / iPad iOS 5 / iOS 6 đã jailbreak — https://conbangtvlegacy.github.io
 MD5Sum:
- 7dc2f80206b5d52c922170d8e217538c 4962 Packages
- 6e139f494015b4cd1df1c4c5e0d285bb 1301 Packages.gz
- ca43285c5d08027d1b413b2dc2c6714f 1562 Packages.bz2
+ 648aa2b99b8de8c45eacb5f157a57992 4960 Packages
+ a1800de89bb83dcf8ab01e0c2ab7c8d1 1296 Packages.gz
+ a302985815b7d7187e60f9db1e4af09d 1570 Packages.bz2
 SHA256:
- 0416834a85d561e8de61d037cc7703be536fc0375834b2bea8bdeb767066b002 4962 Packages
- 1a68b1548ce317b6f1455fe2442fc4e5c7bc2cd77fd707c9aa98f2fc899c7482 1301 Packages.gz
- 28e065851c19220c9f43dc875f876190135e0cbeb3da292042ec81a032587c55 1562 Packages.bz2
+ 54b233699a498d26f6e4038755203d11fa3f4bd14fdd7c9e23a4388797fe0980 4960 Packages
+ bb923acc092968c25ddc5f7dcb1736828ba6c0d19c0cea0a0927572b5460ac19 1296 Packages.gz
+ e00c31a7d7f0434abc4a120450d844ab89a3feb99e72cd8ae4331c2f55762c75 1570 Packages.bz2
